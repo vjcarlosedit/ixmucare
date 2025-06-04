@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lustria&display=swap');
+
+/* CONFIGURACIÓN BASICA */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 60px; /* Espacio para el header fijo */
+    padding-bottom: 60px; /* Espacio para el footer fijo */
+    background-color: #F4F5F6;
+}
+
+/* MENÚ DE NAVEGACIÓN */
+header {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem;
+    background-color: #222222;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 200px;
+}
+
+
+
+
+
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px; /* Espaciado entre los elementos */
+}
+
+ul li {
+    position: relative;
+}
+
+ul li a {
+    display: inline-block; /* Para usar padding y dimensiones */
+    background-color: #222222; /* Fondo gris por defecto */
+    padding: 12px 24px; /* Espaciado interno similar al botón login-btn */
+    border-radius: 5px; /* Bordes redondeados */
+    color: #ffffff; /* Color del texto */
+    font-size: 1em; /* Tamaño del texto */
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none; /* Quitar subrayado */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+}
+
+ul li a:hover {
+    background-color: #7a7124; /* Fondo verde al pasar el cursor */
+    color: #fff; /* Texto blanco para contraste */
+    transform: scale(1.05); /* Aumentar ligeramente al pasar el cursor */
+}
+
+
+
+.select-btn{
+    background-color: #666666; 
+    padding: 12px 24px; 
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 1em; 
+    font-family: 'Montserrat', serif;
+    text-decoration: none;
+    /* display: inline-block; */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.select-btn:hover {
+    background-color: #444444; 
+    transform: scale(1.05); 
+}
+
+
+
+
+
+.login-btn {
+    background-color: #597B2C; 
+    padding: 12px 24px; 
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 1em; 
+    font-family: 'Montserrat', serif;
+    text-decoration: none;
+    /* display: inline-block; */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-btn:hover {
+    background-color: #4b6826; 
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+/* Contenedor de la galería */
+#galeria {
+    padding: 60px 20px;
+    background-color: #F4F5F6;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-title {
+    font-size: 2em;
+    color: #597B2C;
+    margin-bottom: 10px;
+}
+
+.gallery-subtitle {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Estilo de la galería */
+/* Galería */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta el número de columnas automáticamente */
+    gap: 15px; /* Espaciado entre las imágenes */
+    padding: 20px; /* Espaciado interno para la galería */
+}
+
+.gallery-image {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 200px; /* Ajusta la altura de las imágenes */
+    object-fit: cover; /* Recorta la imagen para que se ajuste al contenedor */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para las imágenes */
+    cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para el hover */
+}
+
+.gallery-image:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el cursor */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra en hover */
+}
+
+
+/* Modal con botones */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    display: block;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.close:hover {
+    color: #8fc83d;
+}
+
+/* Botones de navegación */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: #fff;
+    font-size: 2em;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.prev {
+    left: 10%;
+}
+
+.next {
+    right: 10%;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: #8fc83d;
+    color: #fff;
+}
+
+
+
+
+
+/* PIE DE PÁGINA */
+
+footer {
+    background-color: #525047;
+    color: #fff;
+    padding: .5rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /* z-index: 1000; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Montserrat', serif;
+}
+
+.contact-social {
+    display: flex;
+    align-items: center;
+}
+
+.social-media {
+    display: flex;
+}
+
+.social-media a {
+    margin-left: 1rem;
+}
+
+.social-media img {
+    width: 20px;
+}

@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lustria&display=swap');
+
+/* CONFIGURACIÓN BASICA */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 60px; /* Espacio para el header fijo */
+    padding-bottom: 60px; /* Espacio para el footer fijo */
+}
+
+/* MENÚ DE NAVEGACIÓN */
+header {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem;
+    background-color: #222222;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 200px;
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px; /* Espaciado entre los elementos */
+}
+
+ul li {
+    position: relative;
+}
+
+ul li a {
+    display: inline-block; /* Para usar padding y dimensiones */
+    background-color: #222222; /* Fondo gris por defecto */
+    padding: 12px 24px; /* Espaciado interno similar al botón login-btn */
+    border-radius: 5px; /* Bordes redondeados */
+    color: #ffffff; /* Color del texto */
+    font-size: 1em; /* Tamaño del texto */
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none; /* Quitar subrayado */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+}
+
+ul li a:hover {
+    background-color: #7a7124; /* Fondo verde al pasar el cursor */
+    color: #fff; /* Texto blanco para contraste */
+    transform: scale(1.05); /* Aumentar ligeramente al pasar el cursor */
+}
+
+.login-btn {
+    background-color: #597B2C; 
+    padding: 12px 24px; 
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 1em; 
+    font-family: 'Montserrat', serif;
+    text-decoration: none;
+    /* display: inline-block; */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-btn:hover {
+    background-color: #4b6826; 
+    transform: scale(1.05);
+}
+
+/* Contenedor principal de la sección */
+.password-reset-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #F4F5F6; /* Igual al fondo de Inicio de Sesión */
+}
+
+/* Contenedor de formulario */
+.password-reset-container {
+    max-width: 350px; /* El mismo ancho que tu contenedor de Inicio de Sesión */
+    width: 100%; /* Asegura que sea responsive */
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px; /* Igual que el contenedor de inicio */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+/* Título */
+.password-reset-container h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #597B2C;
+}
+
+/* Caja de entrada (Correo electrónico) */
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 35px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #F4F5F6;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 35px;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 0.9em;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.input-box input:focus + label,
+.input-box input:not(:placeholder-shown) + label {
+    top: 0;
+    left: 35px;
+    font-size: 0.75em;
+    color: #8fc83d;
+    background-color: white;
+    padding: 0 5px;
+}
+
+.input-box .icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #8fc83d;
+}
+
+/* Botón de envío */
+.btn {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #597B2C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #4b6826;
+    transform: scale(1.05);
+}
+
+/* Enlace de regreso al inicio de sesión */
+.back-to-login {
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 15px;
+}
+
+.back-to-login a {
+    color: #8fc83d;
+    text-decoration: none;
+}
+
+.back-to-login a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Estilo para la instrucción */
+.instruction {
+    font-size: 0.9em;
+    color: #555; /* Color suave para el texto */
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+
+
+
+
+
+
+
+/* PIE DE PÁGINA */
+
+footer {
+    background-color: #525047;
+    color: #fff;
+    padding: .5rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /* z-index: 1000; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Montserrat', serif;
+}
+
+.contact-social {
+    display: flex;
+    align-items: center;
+}
+
+.social-media {
+    display: flex;
+}
+
+.social-media a {
+    margin-left: 1rem;
+}
+
+.social-media img {
+    width: 20px;
+}

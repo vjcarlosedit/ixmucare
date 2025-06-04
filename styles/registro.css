@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lustria&display=swap');
+
+
+
+
+.input-box {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-box input,
+.input-box select {
+    width: 100%;
+    padding: 10px 35px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #F4F5F6;
+    appearance: none; /* elimina flecha nativa del select */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 35px;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 0.9em;
+    transition: 0.3s;
+    pointer-events: none;
+    background-color: transparent;
+}
+
+.input-box input:focus + label,
+.input-box input:not(:placeholder-shown) + label,
+.input-box select:focus + label,
+.input-box select:valid + label {
+    top: 0;
+    left: 35px;
+    font-size: 0.75em;
+    color: #8fc83d;
+    background-color: white;
+    padding: 0 5px;
+}
+
+.input-box .icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #8fc83d;
+    pointer-events: none;
+}
+
+.input-box .toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #8fc83d;
+}
+
+/* Agregar una flecha personalizada al select */
+.input-box select {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg width='10' height='7' viewBox='0 0 10 7' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%238fc83d' stroke-width='2' fill='none' fill-rule='evenodd'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px 7px;
+}
+
+
+/* CONFIGURACIÓN BASICA */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    /* padding-top: 60px; Espacio para el header fijo */
+    /* padding-bottom: 60px; */
+}
+
+/* MENÚ DE NAVEGACIÓN */
+header {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem;
+    background-color: #222222;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 200px;
+}
+
+
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px; /* Espaciado entre los elementos */
+}
+
+ul li {
+    position: relative;
+}
+
+ul li a {
+    display: inline-block; /* Para usar padding y dimensiones */
+    background-color: #222222; /* Fondo gris por defecto */
+    padding: 12px 24px; /* Espaciado interno similar al botón login-btn */
+    border-radius: 5px; /* Bordes redondeados */
+    color: #ffffff; /* Color del texto */
+    font-size: 1em; /* Tamaño del texto */
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none; /* Quitar subrayado */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+}
+
+ul li a:hover {
+    background-color: #7a7124; /* Fondo verde al pasar el cursor */
+    color: #fff; /* Texto blanco para contraste */
+    transform: scale(1.05); /* Aumentar ligeramente al pasar el cursor */
+}
+
+
+.login-btn {
+    background-color: #597B2C; 
+    padding: 12px 24px; 
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 1em; 
+    font-family: 'Montserrat', serif;
+    text-decoration: none;
+    /* display: inline-block; */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-btn:hover {
+    background-color: #4b6826; 
+    transform: scale(1.05);
+}
+
+
+
+
+.register-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #F4F5F6; /* Fondo de la sección */
+    padding-top: 55px; /* Espacio para el header fijo */
+}
+
+.register-container {
+    width: 380px;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.register-container h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #597B2C;
+}
+
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 35px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #F4F5F6;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 35px;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 0.9em;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.input-box input:focus + label,
+.input-box input:not(:placeholder-shown) + label {
+    top: 0;
+    left: 35px;
+    font-size: 0.75em;
+    color: #8fc83d;
+    background-color: white;
+    padding: 0 5px;
+}
+
+.input-box .icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #8fc83d;
+}
+
+.input-box .toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #8fc83d;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #597B2C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #4b6826;
+    transform: scale(1.05);
+}
+
+.login-link {
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 15px;
+}
+
+.login-link a {
+    color: #8fc83d;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* PIE DE PÁGINA */
+
+footer {
+    background-color: #525047;
+    color: #fff;
+    padding: .5rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /* z-index: 1000; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Montserrat', serif;
+}
+
+.contact-social {
+    display: flex;
+    align-items: center;
+}
+
+.social-media {
+    display: flex;
+}
+
+.social-media a {
+    margin-left: 1rem;
+}
+
+.social-media img {
+    width: 20px;
+}

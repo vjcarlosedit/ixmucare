@@ -1,0 +1,617 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lustria&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f4e3; /* Fondo claro */
+    color: #333; /* Color de texto */
+}
+
+header {
+    background-color: #8b572a; /* Color principal de Ixmucare */
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    background-color: #ffffff;
+    color: #8b572a;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #e0f2f1;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-item {
+    background-color: #ffffff; /* Fondo blanco para cada item */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+}
+
+.menu-item p {
+    font-size: 1.5rem; /* Tamaño de fuente grande */
+    font-weight: bold;
+    padding: 10px;
+    background-color: #ffae42; /* Color de fondo del texto */
+    color: #333; /* Color de texto oscuro */
+    text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f9f4; /* Fondo claro, tipo playa */
+    color: #333; /* Color de texto */
+}
+
+header {
+    background-color: #00796b; /* Color de mar */
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    background-color: #ffffff;
+    color: #00796b;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #e0f2f1;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-item {
+    background-color: #ffffff; /* Fondo blanco para cada item */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+}
+
+.menu-item p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #00796b; /* Fondo color mar */
+    color: #fff; /* Texto en blanco */
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+
+/* Configuración basica */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 60px; /* Espacio para el header fijo */
+    padding-bottom: 60px; /* Espacio para el footer fijo */
+}
+
+/* Configuración del menú de navegación */
+
+header {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem;
+    background-color: #222222;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 200px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    font-family: 'Montserrat', sans-serif; /* Cambia la tipografía del menú de navegación */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem; /* Aumenta el espaciado entre los textos */
+}
+
+.login-btn {
+    background-color: #597B2C; /* Color del botón de iniciar sesión */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #7a7124; /* Color de fondo del botón en hover */
+}
+
+
+/* Configuración del carousel de imagenes */
+
+.carousel {
+    /* position: relative; */
+    /* width: 100%; */
+    /* height: 80vh; Tamaño en pantallas grandes */
+    /* max-height: 700px; Establece una altura máxima */
+    overflow: hidden;
+}
+
+.carousel-slide img {
+    width: 100%;
+    /* height: 100vh; */
+    max-height: 700px; 
+}
+
+/* Configuración de la sección: sobre nosotros */
+#sobre-nosotros {
+    padding: 40px;
+    background-color: #fff;
+    color: #8fc83d;
+    margin: 0 auto; /* Centra el contenedor principal */
+    max-width: 1200px; /* Limita el ancho máximo para que esté bien alineado */
+}
+
+.content-wrapper {
+    padding: 0; /* Quita el padding superior e inferior para evitar espacios extra */
+    display: flex;
+    gap: 3rem; /* Reduce el espacio entre el collage y el texto */
+    align-items: center;
+    justify-content: center; /* Centra horizontalmente el contenido */
+}
+
+.text-content {
+    max-width: 600px; /* Mantiene el ancho máximo del texto */
+    text-align: justify;
+}
+
+.text-content h2 {
+    font-size: 2em;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 30px;
+}
+
+.text-content p {
+    font-size: 1em;
+    font-family: 'Lustria', serif;
+    line-height: 1.6;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.collage {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.collage-row {
+    display: flex;
+    gap: 10px;
+}
+
+.collage-rect {
+    max-width: 372px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.collage-square {
+    max-width: 180px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Configuración de la sección: Nuestro Menú */
+#banner {
+    background-color: #F4F5F6;
+    padding: 40px;
+    text-align: center;
+}
+
+.banner-content p {
+    font-size: 1em;
+    font-family: 'Lustria', serif;
+    line-height: 1.6;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.banner-content h2 {
+    font-size: 2em;
+    font-family: 'Montserrat', serif;
+    color: #4d4a3f;
+    margin-bottom: 20px;
+}
+
+.btn-explorar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #8fc83d;
+    color: #ffffff;
+    font-size: 0.9em;
+    font-family: 'Montserrat', serif;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-explorar:hover {
+    background-color: #7a7124;
+}
+
+/* Ajuste del contenedor de categorías */
+#menu-categorias {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #F4F5F6;
+    padding: 25px;
+    gap: 20px; /* Aumenta el espacio entre las tarjetas */
+}
+
+.categoria-card {
+    background-color: #ffffff;
+    width: 160px; /* Reduce el ancho para dar un espaciado equilibrado */
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container {
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 0 0 2px #ffffff;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.categoria-img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.categoria-card h3 {
+    font-size: 1em;
+    font-family: 'Montserrat', serif;
+    color: #000000;
+    margin: 10px 0;
+}
+
+
+/* Configuración para Nuestros Servicios */
+#nuestros-servicios {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.servicios-header h2 {
+    font-size: 2em;
+    font-family: 'Montserrat', sans-serif;
+    color: #8fc83d;
+    margin-bottom: 15px;
+}
+
+.servicios-header p {
+    font-size: 1em;
+    font-family: 'Lustria', serif;
+    color: #000000;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+}
+
+.servicios-stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px; /* Aumenta el espacio entre las tarjetas */
+}
+
+.stat-item {
+    background-color: #F4F5F6;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px; /* Ancho ajustado para dar más espacio al texto */
+    text-align: center;
+}
+
+.stat-item i {
+    font-size: 2em;
+    color: #8fc83d;
+    margin-bottom: 10px;
+}
+
+.stat-item h3 {
+    font-size: 1.6em;
+    color: #333;
+    margin: 5px 0;
+}
+
+.stat-item p {
+    font-size: 1em;
+    color: #666;
+    font-family: 'Montserrat', serif;
+    line-height: 1.6; /* Aumenta el espacio entre líneas para mejor legibilidad */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+
+
+/* Configuración para Galeria */
+
+#galeria-platillos {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.galeria-header h2 {
+    font-size: 2em;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.galeria-header p {
+    font-size: 1em;
+    font-family: 'Lustria', serif;
+    color: #666;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+}
+
+.divider {
+    width: 50px;
+    height: 3px;
+    background-color: #8fc83d;
+    margin: 10px auto 30px auto;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.platillo-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.platillo-card:hover {
+    transform: scale(1.05);
+}
+
+.platillo-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 3px solid #8fc83d;
+}
+
+.platillo-card h3 {
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+/* Configuracipon de cita */
+
+#bienvenida {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.bienvenida-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.quote-icon {
+    font-size: 3em;
+    color: #ff7e29;
+    margin: 0 15px;
+}
+
+.left-quote {
+    align-self: flex-start;
+}
+
+.right-quote {
+    align-self: flex-end;
+}
+
+.quote-text {
+    max-width: 500px;
+    text-align: center;
+    margin: 0 20px;
+}
+
+.quote-text p {
+    font-size: 1.1em;
+    font-family: 'Lustria', serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+.author-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: block;
+    border: 2px solid #ff7e29;
+}
+
+.author-name {
+    font-size: 1.2em;
+    font-family: 'Pacifico', cursive; /* Fuente cursiva para la firma */
+    color: #333;
+    margin-top: 10px;
+}
+
+
+
+/* Configuracipon del pie de página */
+
+footer {
+    background-color: #525047;
+    color: #fff;
+    padding: .5rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /* z-index: 1000; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-social {
+    display: flex;
+    align-items: center;
+}
+
+.social-media {
+    display: flex;
+}
+
+.social-media a {
+    margin-left: 1rem;
+}
+
+.social-media img {
+    width: 20px;
+}
