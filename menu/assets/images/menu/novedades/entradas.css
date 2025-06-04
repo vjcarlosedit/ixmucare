@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lustria&display=swap');
+
+/* CONFIGURACIÓN BASICA */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 60px; /* Espacio para el header fijo */
+    padding-bottom: 60px; /* Espacio para el footer fijo */
+}
+
+/* MENÚ DE NAVEGACIÓN */
+header {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem;
+    background-color: #222222;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 200px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    font-family: 'Montserrat', sans-serif; /* Cambia la tipografía del menú de navegación */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+.login-btn {
+    background-color: #597B2C; 
+    padding: 12px 24px; 
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 1em; 
+    font-family: 'Montserrat', serif;
+    text-decoration: none;
+    /* display: inline-block; */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-btn:hover {
+    background-color: #4b6826; 
+    transform: scale(1.05);
+}
+
+
+
+
+#entradas {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #F4F5F6;
+}
+
+.category-title {
+    font-size: 2.5em;
+    font-family: 'Montserrat', sans-serif;
+    color: #4d4a3f;
+    margin-bottom: 20px;
+}
+
+.category-description {
+    font-size: 1em;
+    font-family: 'Lustria', serif;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.platillos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.platillo-card {
+    background-color: #ffffff;
+    width: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.platillo-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.platillo-img {
+    width: 100%;
+    height: auto;
+    border-bottom: 3px solid #8fc83d;
+}
+
+.platillo-card h3 {
+    font-size: 1.1em;
+    font-family: 'Montserrat', serif;
+    color: #333;
+    margin-top: 12px;
+    line-height: 1.2em; /* Altura de línea */
+    /* height: 2.4em; Máximo para dos líneas */
+    overflow: hidden; /* Oculta el texto sobrante */
+    text-overflow: ellipsis; /* Muestra puntos suspensivos */
+    white-space: nowrap; /* Mantiene las palabras juntas */
+    display: block;
+}
+
+.price {
+    font-size: 1em;
+    font-family: 'Lustria', serif;
+    color: #8fc83d;
+    margin: 10px 0;
+}
+
+.add-to-cart-btn {
+    background-color: #8fc83d;
+    border: none;
+    color: white;
+    padding: 10px 20px; /* Ajusta el tamaño interno del botón */
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px auto; /* Agrega espacio arriba y centra el botón horizontalmente */
+    display: block; /* Asegura que el botón esté centrado */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #7a7124;
+    transform: scale(1.1);
+}
+
+.add-to-cart-btn i {
+    font-size: 1.2em;
+}
+
+
+/* modales */
+
+/* Estilo general del modal */
+.modal {
+    display: none; /* Oculta el modal inicialmente */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semi-transparente */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.modal h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.modal p {
+    font-size: 1em;
+    color: #666;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px; /* Ajusta la distancia desde la parte superior */
+    right: 20px; /* Ajusta la distancia desde el lado derecho */
+    width: 40px; /* Ancho del botón */
+    height: 40px; /* Altura del botón */
+    font-size: 1.5em; /* Tamaño de la "X" */
+    color: #333; /* Color de la "X" */
+    background: #fff; /* Fondo del círculo */
+    border: none;
+    border-radius: 50%; /* Hace el botón circular */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+}
+
+.close-btn:hover {
+    background: #f4f4f4; /* Cambia el fondo al pasar el mouse */
+}
+
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+
+
+/* PIE DE PÁGINA */
+
+footer {
+    background-color: #525047;
+    color: #fff;
+    padding: .5rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /* z-index: 1000; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Montserrat', serif;
+}
+
+.contact-social {
+    display: flex;
+    align-items: center;
+}
+
+.social-media {
+    display: flex;
+}
+
+.social-media a {
+    margin-left: 1rem;
+}
+
+.social-media img {
+    width: 20px;
+}
